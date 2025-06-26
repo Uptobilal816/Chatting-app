@@ -1,0 +1,29 @@
+body{
+    margin-left: 20px;
+    background-color: lightslategray;
+}
+h1{
+    background-color: rgb(6, 139, 255);
+    text-align: center;
+    border-radius: 5px;
+}
+.chat{
+    background-color:black;
+    padding-left: 10px;
+    border-radius: 10px;
+    color: white;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+.from{
+    background-color:rgb(6, 139, 255);
+    border-radius: 10px;
+     margin-top: 0px;
+    margin-bottom: 0px;
+}
+button{
+    background-color: lightblue;
+    border-radius: 3px;
+    border: solid 1px white;
+}

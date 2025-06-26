@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Chat</title>
+</head>
+<body>
+    <form method="POST" action="/chat/<%=chat._id %>?_method=PUT">
+        <p>The message was sent to <%= chat.to %> from <%= chat.from %></p>
+        <label for="message">Edit Message:</label>
+        <input type="text" id="msg" name="msg" value="<%= chat.msg %>" required>
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>

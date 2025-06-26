@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatting App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="title">All Chats</h1>
+      <form method="GET" action="/chat/new">
+        <button>New Chat</button>
+      </form>  
+    <%for (let chats of chat) { %> <!-- Added EJS loop to render chats -->
+        <div class="chat">
+            <h3 class="from"><i> Sent by : <%= chats.from %></i></h3> <!-- Display sender -->
+            <p class="to"> <i>Received by : <%= chats.to %></i></p> <!-- Display receiver -->
+            <p class="msg">Latest message: <%= chats.msg %></p> <!-- Display message -->
+            <p class="created_at"> Created at : <%= chats.create_at.toString().split(" ") [4] %></p> <!-- Display timestamp -->
+            <p class="created_at"> Created at : <%= chats.create_at.toString().split(" ") .slice(0,4) .join("-") %></p> 
+            <hr>
+            <form method="GET" action="/chat/<%= chats._id %>/edit">
+                <button>Edit</button>
+            </form>
+           <br>
+        </div>
+  <%  }%> <!-- End EJS loop -->
+</body>
+</html>
